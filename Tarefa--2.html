@@ -1,0 +1,192 @@
+<!--
+
+Muito Bem.
+
+(....\............../....)
+. \....\........... /..../
+...\....\........../..../
+....\..../´¯.I.¯`\./
+..../... I....I..(¯¯¯`\
+...I.....I....I...¯¯.\...\
+...I.....I´¯.I´¯.I..\...)
+...\.....` ¯..¯ ´.......'
+....\_________.?´
+.....lo o o o o ol
+.....lo o o o o ol
+.....lo o o o o ol
+
+
+Agora vamos a segunda tarefa do teste.
+TODO: Seguindo essa estrutura html e usando jQuery, você terá que criar um carrossel dinamicamente,
+de maneira que você deverá se utilizar de um endpoint para obter as informações que
+serão inseridas em cada box que você também terá que criar, lembrando que cada box
+terá um link, que também virá do endpoint, para onde deverá redirecionar ao clicar nele,
+depois seguindo um segundo endpoint, você terá que criar uma transição de telas tendo como
+gatilho o botão btn-facebook, sendo que a segunda tela você deverá criar, tendo como conteúdo
+uma imagem e um elemento de texto de id nome, que terá, respectivamente, seu src e seu conteúdo,
+trocados pelas informações providas do respectivo endpoint.
+
+Algumas ressalvas:
+Você terá que criar um carrossel com 3 produtos por paginação,
+você deverá usar o slick carrossel(http://kenwheeler.github.io/slick/)
+para a criação do dito carrossel, abaixo estarão os links para os endpoints:
+
+Endpoint Produtos: endpoints/products/products.json
+
+Endpoint Facebook: endpoints/facebook/facebook.json
+
+-->
+
+<!doctype html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>
+
+        Teste Shopback 2017
+
+    </title>
+    <link rel="stylesheet" type="text/css" href="lib/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css"/>
+     <link href="css/main.css" rel="stylesheet" />
+    <style type="text/css">
+
+        @import url("assets/css/font-awesome.min.css") all;
+        @import url('https://fonts.googleapis.com/css?family=Varela+Round') all;
+        @import url("assets/css/default--style--css.css") all;
+
+    </style>
+
+</head>
+
+<body>
+    <script id="template-produtos" type="x-tmpl-mustache">
+                <ul class="shelf-content-itens">                
+                {{#produtos}}
+                    <li class="shelf-itens">
+                       <a href="{{link}}" class="link">
+                            <img class="image" src="{{imagem}}"/ >
+                       </a>
+                       <span class="nome">{{nome}}</span>
+                       <span class="preco">R${{preco}}</span>
+                    </li>
+                {{/produtos}}
+                </ul>   
+    </script>
+
+    <script id="template-facebook" type="x-tmpl-mustache">
+                               
+                {{#facebook}}
+                    <span class="nome"><b>{{nome}}</b> {{texto}}</span>
+                    <img class="image" src="{{imagem}}"/ >
+                {{/facebook}}
+                  
+    </script>
+
+    <section class="Overlay Recomendacao">
+
+        <header class="Overlay Recomendacao--header">
+
+            <button class="btn btn--close">
+
+                <i class="fa fa-times"></i>
+
+            </button>
+
+            <figure class="Overlay Header--logo">
+
+                <img src="assets/img/logo.jpg" alt="">
+
+            </figure>
+
+            <div class="Overlay Header--title">
+
+                <h2>
+
+                    <b>
+
+                        Lorem ipsum dolor.
+
+                    </b>
+
+                    Lorem ipsum dolor sit amet, consectetur.
+
+                </h2>
+
+
+            </div>
+            
+
+        </header>
+
+        <section class="Overlay Recomendacao--products">
+
+           <div class="shelf-content"></div>
+          
+
+
+        </section>
+
+        <footer class="Overlay Recomendacao--footer">
+
+            <header class="Overlay Footer--header">
+
+                CONECTE-SE COM O FACEBOOK E RECEBA NOSSAS PROMOÇÕES
+
+            </header>
+
+            <section class="Overlay Footer--facebook">
+
+                <!--
+
+                    TODO: O botão abaixo terá a tarefa de trocar de tela, para uma tela
+                    de agradecimento( Que você irá produzir), substituindo o src de uma imagem
+                    e retornar na tela um texto que irá ser retornado por um requerimento via ajax(Que você irá fazer).
+
+                -->
+                <button class="Overlay btn btn--facebook">
+
+                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+
+                    <span>
+
+                        <b>
+
+                            CONECTE-SE COM O FACEBOOK
+
+                        </b>
+                        <br>
+                        <small>
+                            *NUNCA PUBLICAREMOS NADA SEM A SUA PERMISSÃO
+                        </small>
+
+                    </span>
+
+                </button>
+
+            </section>
+
+
+        </footer>
+
+        <div class="agradedecimento"></div>
+    </section>
+    <script src="lib/jquery.js"></script>    
+    <script src="lib/mustache.min.js"></script>
+    <script src="js/main-dois.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="lib/slick/slick.min.js"></script>
+    
+                
+</body>
+
+</html>

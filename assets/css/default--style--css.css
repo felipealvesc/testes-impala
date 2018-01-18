@@ -1,0 +1,379 @@
+body,
+body *{
+
+    padding                 : 0;
+    margin                  : 0;
+    outline                 : none;
+    border                  : none;
+    background-color        : transparent;
+    font-size               : 14px;
+    font-family             : "Varela Round", Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+}
+
+.Overlay.Recomendacao,
+.Header--logo,
+.Overlay.Footer--header,
+.btn--facebook,
+.btn--facebook span,
+.Pesquisa.Main,
+.Pesquisa.Main--header{
+
+    -webkit-box-sizing  : border-box;
+    -moz-box-sizing     : border-box;
+    box-sizing          : border-box;
+
+}
+
+.Overlay.Recomendacao,
+.Pesquisa.Main{
+
+    width               : 800px;
+    height              : 600px;
+    position            : fixed;
+    left                : 0;
+    right               : 0;
+    top                 : 50%;
+    margin              : -300px auto 0;
+    background-color    : #eeeeee;
+    border-radius       : 20px;
+    padding             : 15px;
+
+}
+
+.btn{
+
+    cursor              : pointer;
+    overflow            : hidden;
+
+}
+
+.btn--close{
+
+    border-radius       : 100%;
+    font-size           : 18px;
+    color               : #4f3d31;
+    background-color    : #f7a13c;
+    width               : 30px;
+    height              : 30px;
+    text-align          : center;
+    line-height         : 26px;
+    border              : solid 2px #fad46f;
+    position            : absolute;
+    top                 : 0;
+    right               : 0;
+
+}
+
+.btn--facebook{
+
+    background-color    : #3b5998;
+    display             : block;
+    width               : 100%;
+    padding             : 5px 5%;
+    color               : #ffffff;
+    border-radius       : 6px;
+    text-align          : left;
+    font-size           : 0;
+
+}
+
+.btn--facebook i{
+
+    font-size           : 42px;
+
+}
+
+.btn--facebook span{
+
+    max-width           : 88%;
+    padding             : 0 2%;
+
+}
+
+.btn--facebook span b{
+
+    font-size           : 13px;
+
+}
+
+.btn--facebook span small{
+
+    font-size           : 9px;
+    line-height         : 10px;
+
+}
+
+.btn--redirect{
+
+    font-size           : 22px;
+    color               : #ffffff;
+    background-color    : #f7a13c;
+    padding             : 10px 20px;
+    border-radius       : 6px;
+    display             : block;
+    margin              : 30px auto 0;
+
+}
+
+.btn--back{
+
+    font-size           : 30px;
+    position            : absolute;
+    bottom              : 100px;
+    right               : 15px;
+    width               : 35px;
+    height              : 35px;
+    background-color    : #f7a13c;
+    border-radius       : 100%;
+    line-height         : 26px;
+    text-align          : center;
+    color               : #4f3d31;
+    border              : solid 2px #fad46f;
+
+}
+
+.Overlay.Recomendacao--header{
+
+    position            : relative;
+    height              : 100px;
+    font-size           : 0;
+
+}
+
+.Overlay.Recomendacao--header > *,
+.Overlay.Recomendacao--footer > *,
+.btn--facebook > *{
+
+    display             : inline-block;
+    vertical-align      : middle;
+
+}
+
+.Overlay.Header--logo{
+
+    width               : 30%;
+    padding             : 0 10px;
+
+}
+
+.Overlay.Header--logo img{
+
+    border-radius       : 3px;
+
+}
+
+.Overlay.Header--title,
+.Overlay.Footer--header,
+.Overlay.Footer--facebook{
+
+    font-size           : initial;
+
+}
+
+.Overlay.Header--title{
+
+    width               : 60%;
+
+}
+
+.Overlay.Header--title h2,
+.Pesquisa.Main--header h2{
+
+    color               : #7f6f64;
+
+}
+
+.Overlay.Header--title h2{
+
+    font-size           : 20px;
+    line-height         : 32px;
+
+}
+
+.Overlay.Header--title h2 b,
+.Pesquisa.Main--header span{
+
+    color               : #4f3d31;
+    display             : block;
+
+}
+
+.Overlay.Header--title h2 b{
+
+    font-size           : 24px;
+
+}
+
+.Overlay.Recomendacao--products{
+
+    height              : 400px;
+
+}
+
+
+.Overlay.Recomendacao--footer{
+
+    font-size           : 0;
+
+}
+
+.Overlay.Footer--header{
+
+    text-align          : center;
+    font-size           : 16px;
+    width               : 55%;
+    padding             : 0 5%;
+    color               : #4f3d31;
+
+}
+
+.Overlay.Footer--facebook{
+
+    width               : 45%;
+    padding             : 10px 0;
+
+}
+
+.Pesquisa.Main{
+
+    padding-left        : 270px;
+
+}
+
+.Pesquisa.Main:before,
+.Pesquisa.Main:after,
+.Pesquisa.Home--routes li i:before,
+.Pesquisa.Answer--header h3 i:before{
+
+    content             : "";
+    display             : block;
+
+}
+
+.Pesquisa.Main:before,
+.Pesquisa.Main:after{
+
+    position            : absolute;
+
+}
+
+.Pesquisa.Main:before{
+
+    width               : 270px;
+    height              : 600px;
+    left                : 0;
+    top                 : 0;
+    background-color    : #f4f1ea;
+    border-radius       : 20px 0 0 20px;
+
+}
+
+.Pesquisa.Main:after{
+
+    background-image     : url('../img/logo.jpg');
+    background-size      : 100%;
+    background-repeat    : no-repeat;
+    width                : 270px;
+    height               : 120px;
+    left                 : 0;
+    top                  : 50%;
+    margin               : -80px auto 0;
+
+}
+
+.Pesquisa.Main--header{
+
+    padding             : 10px 15px;
+    position            : relative;
+
+}
+
+.Pesquisa.Main--header h2{
+
+    font-size           : 26px;
+
+}
+
+.Pesquisa.Main--header h2 span{
+
+    font-size           : 36px;
+
+}
+
+.Pesquisa.Main--pages{
+
+    width               : 90%;
+    margin              : 0 5%;
+
+}
+
+.Pesquisa.Pages--home{
+
+    padding             : 40px 0;
+
+}
+
+.Pesquisa.Home--routes{
+
+    list-style          : none;
+
+}
+
+.Pesquisa.Home--routes li,
+.Pesquisa.Answer--header h3{
+
+    position            : relative;
+    padding             : 10px 0 20px 40px;
+    font-size           : 19px;
+    cursor              : pointer;
+    margin              : 10px 0;
+    color               : #4f3d31;
+    font-weight         : bold;
+
+}
+
+.Pesquisa.Home--routes li i,
+.Pesquisa.Answer--header h3 i{
+
+    position            : absolute;
+    left                : 10px;
+    top                 : 50%;
+    width               : 20px;
+    height              : 20px;
+    border-radius       : 100%;
+    background-color    : #cccccc;
+    margin-top          : -15px;
+
+}
+
+.Pesquisa.Home--routes li:not(:hover) i:before{
+
+    -webkit-transform   : scale(0);
+    -moz-transform      : scale(0);
+    -o-transform        : scale(0);
+    transform           : scale(0);
+
+}
+
+.Pesquisa.Home--routes li i:before,
+.Pesquisa.Answer--header h3 i:before{
+
+    margin              : 1px auto;
+    width               : 18px;
+    height              : 18px;
+    border-radius       : 100%;
+    background-color    : #f7a13c;
+    -webkit-transition  : 120ms all cubic-bezier(.430, -0.83, .630, 1.999);
+    -moz-transition     : 120ms all cubic-bezier(.430, -0.83, .630, 1.999);
+    -o-transition       : 120ms all cubic-bezier(.430, -0.83, .630, 1.999);
+    transition          : 120ms all cubic-bezier(.430, -0.83, .630, 1.999);
+}
+
+.Pesquisa.Answer--text p{
+
+    font-size           : 18px;
+    line-height         : 28px;
+    color               : #f8a23d;
+
+}

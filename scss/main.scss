@@ -1,0 +1,30 @@
+.image{
+	display: block;
+	margin: 0 auto;
+	max-width: 200px;
+}
+.preco{
+	display: block;
+	text-align: center;
+	color: red;
+	font-weight: bold;
+	font-size: 16px;
+}
+.Header--logo{
+	img{
+		max-width:  100%;
+	}
+}
+.slick-next, .slick-prev{
+	&:before{
+		color:black;
+	 }
+}
+.nome{
+	min-height: 100px;
+	display: block;
+	padding: 10px;
+}
+.agradedecimento{
+	text-align:center;
+}

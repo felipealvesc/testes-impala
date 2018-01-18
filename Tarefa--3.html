@@ -1,0 +1,255 @@
+<!--
+
+ TODO:   Essa é a terceira e ultima tarefa do teste para a vaga de Front-End
+ para a ShopBack, você deverá criar um script, se utilizando de jquery,
+ para fazer a troca de páginas conforme o click e m cada um dos itens da
+ ul Home--routes, lembrando que a ordem dos links é a mesma de suas determinadadas
+ páginas (.Answer), você deverá criar também um evento de voltar a página inicial,
+ este evento terá como gatilho o botão btn--back.
+    Haverá também, um mini carrossel na tela correspondente a ultima opção, onde
+ você deverá criar um carrossel, similar a tarefa de numero 2, só que agora, com apenas
+ um produto por página do carrossel;
+
+ Endpoint de produtos: endpoints/products/products.json
+ Carrossel Slick: http://kenwheeler.github.io/slick/
+
+ Boa Sorte!
+
+ Equipe ShopBack.
+
+ ________________________¶¶____¶¶____¶¶
+________________________¶¶____¶¶____¶¶
+_________________¶¶______¶¶____¶¶____¶¶
+__________________¶¶¶¶_____¶¶____¶¶____¶¶
+_____________¶¶______¶¶_________________¶¶
+______________¶¶¶¶________________________¶¶
+________________¶¶¶___________¶¶_________¶¶
+_________________¶¶_____¶¶_____¶¶______¶¶
+__________________¶¶_____¶¶____________¶¶
+__________________¶¶___________________¶¶
+_____¶¶___¶¶______¶¶____________¶¶_____¶¶
+______¶¶__¶¶______¶¶____¶¶_____¶¶_____¶¶
+_______¶¶_¶¶_______¶¶______¶¶¶¶¶_____¶¶
+______¶¶¶¶¶¶¶_______¶¶______________¶¶
+_____¶¶¶¶¶¶¶¶¶¶_______¶¶¶¶¶¶¶¶¶¶¶¶¶¶__¶¶
+_____¶¶¶¶¶¶¶¶¶¶___________¶¶___________¶¶
+_______¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶____________¶¶
+__________________________¶¶_____________¶¶
+
+-->
+
+<!doctype html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>
+
+        Teste de overlay de pesquisa
+
+    </title>
+    <link rel="stylesheet" type="text/css" href="lib/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css"/>
+    <link href="css/main.css" rel="stylesheet" />
+    <style type="text/css">
+
+        @import url("assets/css/font-awesome.min.css") all;
+        @import url('https://fonts.googleapis.com/css?family=Varela+Round') all;
+        @import url("assets/css/default--style--css.css") all;
+
+    </style>
+
+</head>
+
+<body>
+    <script id="template" type="x-tmpl-mustache">
+        <ul class="shelf-content-itens">                
+        {{#produtos}}
+            <li class="shelf-itens">
+               <a href="{{link}}" class="link">
+                    <img class="image" src="{{imagem}}"/ >
+               </a>
+               <span class="nome">{{nome}}</span>
+               <span class="preco">R${{preco}}</span>
+            </li>
+        {{/produtos}}
+        </ul>   
+    </script>
+
+    <section class="Pesquisa Main">
+
+        <header class="Pesquisa Main--header">
+            
+            <button class="Pesquisa btn btn--close">
+                
+                <i class="fa fa-times"></i>
+                
+            </button>
+
+            <h2>
+
+                <span>
+
+                    Por que,
+
+                </span>
+
+                você está indo embora?
+
+            </h2>
+
+        </header>
+
+        <section class="Pesquisa Main--pages">
+
+            <section class="Pesquisa Pages--home">
+
+                <ul class="Pesquisa Home--routes">
+
+                    <li>
+
+                        <i></i>
+                        Não encontrei o produto que procurava.
+
+                    </li>
+
+                    <li>
+
+                        <i></i>
+                        Vou comprar em outra loja.
+
+                    </li>
+
+                    <li>
+
+                        <i></i>
+                        O produto que eu queria não tem em estoque.
+
+                    </li>
+
+                </ul>
+
+                <footer class="Pesquisas Home--footer">
+
+                    <button class="Pesquisas btn btn--redirect">
+
+                        CONTINUAR NO SITE
+
+                    </button>
+
+                </footer>
+
+            </section>
+
+            <section style="display: none;" class="Pesquisa Pages Answer">
+
+                <header class="Pesquisa Answer--header">
+
+                    <h3>
+
+                        <i></i>
+                        Não encontrei o produto que procurava.
+
+                    </h3>
+
+                </header>
+
+                <section class="Pesquisa Answer--text">
+
+                    <p>
+
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi cupiditate dolore dolorem, ea explicabo fuga illo illum maiores necessitatibus, nisi perferendis placeat rerum tempore temporibus totam voluptatum.
+
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cupiditate dolorum eum fugit ipsa maxime, optio quibusdam saepe?
+
+                    </p>
+
+                </section>
+
+                <button class="Pesquisa btn btn--back">
+
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+
+                </button>
+
+            </section>
+
+            <section style="display: none;" class="Pesquisa Pages Answer">
+
+                <header class="Pesquisa Answer--header">
+
+                    <h3>
+
+                        <i></i>
+                        Vou comprar em outra loja.
+
+                    </h3>
+
+                </header>
+
+                <section class="Pesquisa Answer--text">
+
+                    <p>
+
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi cupiditate dolore dolorem, ea explicabo fuga illo illum maiores necessitatibus, nisi perferendis placeat rerum tempore temporibus totam voluptatum.
+
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cupiditate dolorum eum fugit ipsa maxime, optio quibusdam saepe?
+
+                    </p>
+
+                </section>
+
+                <button class="Pesquisa btn btn--back">
+
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+
+                </button>
+
+            </section>
+
+            <section style="display: none;" class="Pesquisa Pages Answer">
+
+                <header class="Pesquisa Answer--header">
+
+                    <h3>
+
+                        <i></i>
+                        O produto que eu queria não tem em estoque.
+
+                    </h3>
+
+                </header>
+
+                <section class="Pesquisa Answer--carrossel">
+
+                    <div class="shelf-content" ></div>
+
+                </section>
+
+                <button class="Pesquisa btn btn--back">
+
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+
+                </button>
+
+            </section>
+
+        </section>
+
+    </section>
+    <script src="lib/jquery.js"></script>    
+    <script src="lib/mustache.min.js"></script>
+    <script src="js/main-tres.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="lib/slick/slick.min.js"></script>
+</body>
+
+</html>
